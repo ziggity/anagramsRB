@@ -3,19 +3,19 @@ require('./lib/anagram.rb')
 
 describe('String#anagram') do
 	it('This will return true for the two word anagram "Ze" of the single letter word "Ze" "This is a Palindrome"') do
-		expect('Ze'.anagram('Ze')).to(eq(["Ze", "This is a palindrome"]))
+		expect('Ze'.anagram('Ze')).to(eq(["This is an anagram", "This is a palindrome"]))
 	end
   it('This returns true for a one word anagram "lasvegas" of the word "salvages"') do
-		expect('salvages'.anagram('lasvegas')).to(eq(['lasvegas']))
+		expect('salvages'.anagram('lasvegas')).to(eq(["This is an anagram"]))
 	end
   it('This returns false for a one word anagram "tacocat" of the word "robot"') do
 		expect('robot'.anagram('tacocat')).to(eq(["these words are not anagrams"]))
 	end
   it('This returns true for a uppercase word "TACOCAT" can be anagram of word "TacoCat"') do
-    expect('tacocat'.anagram('tacocat')).to(eq(['tacocat']))
+    expect('tacocat'.anagram('tacocat')).to(eq(["This is an anagram"]))
   end
   it('This returns false for a white space at end of word "tacocat" can be anagram of word "tacocat "') do
-    expect('tacocat '.anagram('tacocat')).to(eq(['tacocat']))
+    expect('tacocat '.anagram('tacocat')).to(eq(["This is an anagram"]))
   end
 
   it('If neither of the inputs contains vowels, This returns:  "not a real word, try again"') do
