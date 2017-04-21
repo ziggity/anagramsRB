@@ -20,4 +20,7 @@ describe('String#anagram') do
   it('This returns false for a white space at end of word "tacocat" can be anagram of word "tacocat "') do
     expect('tacocat '.anagram('tacocat')).to(eq(['tacocat', false]))
   end
+  it('This returns true for a word that is on the anagram master list_of_anagrams "beats" is on the list_of_anagrams') do
+    expect('beats'.anagram('beats')).to(eq(['beats', true]))
+  end
 end
