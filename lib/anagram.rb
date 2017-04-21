@@ -18,9 +18,9 @@ class String
 		user_input = user_input.map(&:downcase)
 
 		if user_input.==(words_anagram)
-			anagram_array.push(words, true)
+			anagram_array.push(words)
 			if user_input.reverse == user_input
-				anagram_array.push("This is a palindrome", true)
+				anagram_array.push("This is a palindrome")
 			 elsif words_anagram.reverse == words_anagram
 			 	anagram_array.push("This is a palindrome")
 			end
