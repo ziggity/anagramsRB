@@ -2,12 +2,9 @@ require('rspec')
 require('./lib/anagram.rb')
 
 describe('String#anagram') do
-	it('This will return true for the anagram "Z" of the single letter word "Z"') do
-		expect('Z'.anagram('Z')).to(eq(['Z', true]))
+	it('This will return true for the two word anagram "Ze" of the single letter word "Ze"') do
+		expect('Ze'.anagram('Ze')).to(eq(['Ze', true]))
 	end
-  it('This returns false for the anagram "Z" of the single letter word "Y"') do
-  		expect('Y'.anagram('Z')).to(eq(['Z', false]))
-  end
   it('This returns true for a one word anagram "lasvegas" of the word "salvages"') do
 		expect('salvages'.anagram('lasvegas')).to(eq(['lasvegas', true]))
 	end
@@ -22,5 +19,11 @@ describe('String#anagram') do
   end
   it('This returns true for a word that is on the anagram master list_of_anagrams "beats" is on the list_of_anagrams') do
     expect('beats'.anagram('beats')).to(eq(['beats', true]))
+  end
+  # it("If the user inputs are anagrams and also palindromes; This returns: 'Your inputs are palindromes, too!'.") do
+  # expect(("racecar, tacocat, malayalam").anagram("recarac, taccota, lamayamal")).to(eq(["Your inputs are palindromes, too!", false]))
+  # end
+  it('If neither of the inputs contains vowels, This returns:  "not a real word"') do
+    expect(('zrts').anagram('zrts')).to(eq(['not a real word, try again']))
   end
 end

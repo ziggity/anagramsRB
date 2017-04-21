@@ -1,10 +1,10 @@
-<h1>Welcome to Anagramamatic!</h1>
+<h1>Welcome to Anagramamatic! Enter a few words or 1, or even a whole sentence!</h1>
 <form action="/anagram">
   <div class="form-group">
-    <label for="anagram">Enter the first word you'd like to check to see if it's an anagram! (only a..z characters please, no numbers, or weird symbols like: "!,',$, #'"):</label>
-    <input id="anagram" name="anagram" class="form-control" type="text" maxlength="45" pattern="[A-Za-z]" title="(only a..z characters please, no numbers, or weird symbols!)"required>
-    <label for="anagram1">Enter the second word you'd like to check to see if it's an anagram!:</label>
-    <input id="anagram1" name="anagram1" class="form-control" type="text" pattern="[A-Za-z]" maxlength="45" title="(only a..z characters please, no numbers, or weird symbols!)">
+    <label for="phrase1">Phrase 1 (only a..z characters please, no numbers, or weird symbols like: "!,',$, #'"):</label>
+    <input id="phrase1" name="phrase1" class="form-control" type="text" maxlength="45" pattern="[A-Za-z]" title="(only a..z characters please, no numbers, or weird symbols!)"required>
+    <label for="phrase2">Phrase 2:</label>
+    <input id="phrase2" name="phrase2" class="form-control" type="text" pattern="[A-Za-z]" maxlength="45" title="(only a..z characters please, no numbers, or weird symbols!)">
   </div>
   <button type="submit" class="btn-success">Anagramatic go!</button>
 </form>
