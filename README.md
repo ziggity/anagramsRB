@@ -20,7 +20,7 @@ _For our purposes, a word is an "antigram" of another word if no letters match. 
 
 ## Specs
 
-* _spec 0: Program will take user's input of 2 separate words_
+* _spec 0: Program will take user's input of 2 separate words or sentences_
 * _spec 1: Program will only accept text as input:_
 * _Input: Googl3's K3wl!_
 * _Output:invalid entry, please enter only text (a..z)!_

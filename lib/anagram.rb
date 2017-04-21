@@ -4,7 +4,7 @@ class String
 		anagram_array = []
 		user_vowel_checker = self
 		(user_vowel_checker+" "+words).split(" ").each do |looper|
-			if !looper[/[aeiou]/]
+			if !looper[/[aeiouy]/]
 				vowels = false
 			end
 		end
@@ -12,28 +12,31 @@ class String
 			anagram_array.push('not a real word, try again')
 			return anagram_array
 		end
-		user_input = self.gsub(/\s+/, "")
-		words_input = words
-		words = words.gsub(/\s+/, "")
-		user_input = self.split("").sort()
-		words_anagram = words.split("").sort()
+		user_input = self.gsub(/[^a-z0-9]/,'').split("").sort()
+		words_anagram = words.gsub(/[^a-z0-9]/,'').split("").sort()
 		words_anagram = words_anagram.map(&:downcase)
 		user_input = user_input.map(&:downcase)
 
 		if user_input.==(words_anagram)
 			anagram_array.push(words, true)
+			if user_input.reverse == user_input
+				anagram_array.push("This is a palindrome", true)
+			 elsif words_anagram.reverse == words_anagram
+			 	anagram_array.push("This is a palindrome")
+			end
 		else
-			anagram_array.push(words, false)
+			anagram_array.push('these words are not anagrams')
+			antigram = true
+			user_input.each() do |letter|
+				if words_anagram.include?(letter)==true
+					antigram = false
+				end
+			end
+			if antigram == true
+				anagram_array.push('these are antigrams!')
+			end
 		end
+		anagram_array
+	end
 
 end
-end
-
-
-
-#Zach, don't forget to include the array of anagrams->:0
-# if list_of_anagrams.include? user_input
-#   puts "Oh goody! that's a 100% genuine anagram you got there!"
-# else
-#   puts "Better luck next time pal, this one is not an anagram, it's more like an antigram!"
-# end
