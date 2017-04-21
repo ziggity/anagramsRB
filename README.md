@@ -17,6 +17,7 @@ _For our purposes, a word is an "antigram" of another word if no letters match. 
 * _type ruby app.rb in terminal_
 * _open web browser and go to localhost:4567_
 * _enjoy!_
+* _here's the heroku app location to test it right now: https://dry-chamber-43615.herokuapp.com/ :)_
 
 ## Specs
 

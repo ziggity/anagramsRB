@@ -2,7 +2,7 @@ require('rspec')
 require('./lib/anagram.rb')
 
 describe('String#anagram') do
-	it('This will return true for the two word anagram "Ze" of the single letter word "Ze" "This is a Palindrome"') do
+	it('This will return true for the two word anagram "Ze" of the single letter word "This is an anagram","This is a Palindrome"') do
 		expect('Ze'.anagram('Ze')).to(eq(["This is an anagram", "This is a palindrome"]))
 	end
   it('This returns true for a one word anagram "lasvegas" of the word "salvages"') do
