@@ -17,4 +17,7 @@ describe('String#anagram') do
   it('This returns true for a uppercase word "TACOCAT" can be anagram of word "TacoCat"') do
     expect('tacocat'.anagram('tacocat')).to(eq(['tacocat', true]))
   end
+  it('This returns false for a white space at end of word "tacocat" can be anagram of word "tacocat "') do
+    expect('tacocat '.anagram('tacocat')).to(eq(['tacocat', false]))
+  end
 end
