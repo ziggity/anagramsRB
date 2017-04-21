@@ -14,4 +14,7 @@ describe('String#anagram') do
   it('This returns false for a one word anagram "tacocat" of the word "robot"') do
 		expect('robot'.anagram('tacocat')).to(eq(['tacocat', false]))
 	end
+  it('This returns true for a uppercase word "TACOCAT" can be anagram of word "TacoCat"') do
+    expect('tacocat'.anagram('tacocat')).to(eq(['tacocat', true]))
+  end
 end

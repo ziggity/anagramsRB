@@ -2,6 +2,8 @@ class String
 	define_method(:anagram) do |words|
 		user_input = self.split("").sort()
 		user_anagram = words.split("").sort()
+		user_anagram = user_anagram.map(&:downcase)
+		user_input = user_input.map(&:downcase)
 		anagram_array = []
 		if user_input.==(user_anagram)
 			anagram_array.push(words, true)
