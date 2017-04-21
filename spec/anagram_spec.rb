@@ -7,7 +7,9 @@ describe('String#anagram') do
 	end
   it('returns false for the anagram "Z" of the single letter word "Y"') do
   		expect('Y'.anagram('Z')).to(eq(['Z', false]))
-  	end
-
+  end
+  it('This returns true for a one word anagram "lasvegas" of the word "salvages"') do
+		expect('salvages'.anagram('lasvegas')).to(eq(['lasvegas', true]))
+	end
 
 end
