@@ -12,7 +12,7 @@ class String
 			anagram_array.push('not a real word, try again')
 			return anagram_array
 		end
-		user_input = self.gsub(/[^a-z0-9]/,'').split("").sort()
+		user_input = self.gsub(/[^a-zA-Z]/,'').split("").sort()
 		words_anagram = words.gsub(/[^a-z0-9]/,'').split("").sort()
 		words_anagram = words_anagram.map(&:downcase)
 		user_input = user_input.map(&:downcase)
